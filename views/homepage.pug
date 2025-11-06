@@ -1,0 +1,18 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/css/style.css')
+  body
+    h1 Hobbies List
+    a(href='/update-cobj') Add a new hobby
+    table(border='1')
+      tr
+        th Name
+        th Nickname
+        th Favorite Color
+      each hobby in hobbies
+        tr
+          td= hobby.properties.name
+          td= hobby.properties.nick_name
+          td= hobby.properties.fav_colour
